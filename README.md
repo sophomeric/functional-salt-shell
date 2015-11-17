@@ -107,6 +107,7 @@ make a mapping of custom keywords to their datasource meanings and fssh will
 understand them from the config file you give it.
 
 Here's an example configuration file (/etc/fssh.conf):
+
     [pillar_map]
     site = building
     env = environment
