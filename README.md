@@ -5,7 +5,7 @@ This is a fork, of sorts, of func-shell and I couldn't think of a better name.
 
 See: https://github.com/seveas/func-shell
 
-The conceptually work the same way, although func and salt are very different.
+They conceptually work the same way, although func and salt are very different.
 The idea was to provide a familiar interface to users of func-shell in moving
 to salt. Some features were not ported, and some were added.
 
