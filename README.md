@@ -59,42 +59,42 @@ next section for convenience as it will likely make this make more sense.
 
 Help
 --------------------
-Query commands:
-    ? [jobid]    Displays current settings.
-                 If the optional jobid is supplied, look up that job number.
-   ??            Look up the results of the most recently run, or looked up job.
+    Query commands:
+        ? [jobid]    Displays current settings.
+                     If the optional jobid is supplied, look up that job number.
+        ??            Look up the results of the most recently run, or looked up job.
 
- Targeting/Filtering commands:
-    + hostspec   Include this spec as a target.
-    - hostspec   Exclude this spec as a target.
-    = hostspec   Sets the hosts to use. This is discouraged.
-                 If you'd like to know why, look for that word in the source.
+    Targeting/Filtering commands:
+        + hostspec   Include this spec as a target.
+        - hostspec   Exclude this spec as a target.
+        = hostspec   Sets the hosts to use. This is discouraged.
+                     If you'd like to know why, look for that word in the source.
 
     hostspecs should be PCRE compatible regexes. They need to match the
     *entire* hostname you wish to target. So '.*fe-web.*' not 'fe-web'. They
     are passed directly to salt and it requires this.
 
- Complex Targeting/Filtering:
-     (+|-) field (!=|==) value
-     The same concepts as basic filtering, but targeting based on
-     pillar data. Example:
+    Complex Targeting/Filtering:
+        (+|-) field (!=|==) value
+            The same concepts as basic filtering, but targeting based on
+            pillar data. Example:
 
-     + status == live    | Include any hosts whose status is live.
-     - env != production | Don't include a host whose environment is not production.
+        + status == live    | Include any hosts whose status is live.
+        - env != production | Don't include a host whose environment is not production.
 
-     For a list of available pillars, try matching on one that doesn't exist!
-     Note that running ? after adding some filters will show you the equivalent
-     salt CLI command, and that might make more sense logically when you see that.
+    For a list of available pillars, try matching on one that doesn't exist!
+    Note that running ? after adding some filters will show you the equivalent
+    salt CLI command, and that might make more sense logically when you see that.
 
-     This magic depends on the magic of external pillars.
+    This magic depends on the magic of external pillars.
 
- Special commands:
-     clear   Reset your fssh environment, clears any existing filters and jobid
-     reset   Same as clear.
+    Special commands:
+        clear   Reset your fssh environment, clears any existing filters and jobid
+        reset   Same as clear.
 
- Running shell commands (basically anything else):
+    Running shell commands (basically anything else):
 
-    command arg1 arg2 arg3
+        command arg1 arg2 arg3
 
 Configuration File
 ---------------------
