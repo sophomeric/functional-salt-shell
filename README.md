@@ -106,13 +106,13 @@ called 'environment', maybe you don't want to type that all the time. You can
 make a mapping of custom keywords to their datasource meanings and fssh will
 understand them from the config file you give it.
 
-Here's an example configuration file:
-[pillar_map]
-site = building
-env = environment
-status = state
-role = service
-dc = location
+Here's an example configuration file (/etc/fssh.conf):
+    [pillar_map]
+    site = building
+    env = environment
+    status = state
+    role = service
+    dc = location
 
 The left side are things you want to use in fssh
 and the right side is what they would actually be called in your pillars.
